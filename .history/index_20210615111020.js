@@ -13,7 +13,7 @@
     return data.Items;
   } 
 
-  const container = document.querySelector('.container');
+  const target = document.querySelector('.target');
 
   searchRakuten('楽天').then(res => {
     res.map(item => {
@@ -34,7 +34,7 @@
     title.innerText = data.itemName;
     caption.innerText = data.itemCaption;
     mediumImage.setAttribute('src', data.mediumImageUrls[0].imageUrl);
-    container.appendChild(wrap);
+    target.appendChild(wrap);
     wrap.appendChild(title)
     wrap.appendChild(mediumImage);
     wrap.appendChild(caption)  

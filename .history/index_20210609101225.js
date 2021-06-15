@@ -13,7 +13,7 @@
     return data.Items;
   } 
 
-  const container = document.querySelector('.container');
+  const target = document.querySelector('.target');
 
   searchRakuten('楽天').then(res => {
     res.map(item => {
@@ -25,8 +25,6 @@
 
   function setElementData(item) {
     const data = item.Item;
-    const wrap = document.createElement('div');
-    wrap.classList.add('target')
     const title = document.createElement('h2');
     const caption = document.createElement('p');
     const mediumImage = document.createElement('img');
@@ -34,8 +32,7 @@
     title.innerText = data.itemName;
     caption.innerText = data.itemCaption;
     mediumImage.setAttribute('src', data.mediumImageUrls[0].imageUrl);
-    container.appendChild(wrap);
-    wrap.appendChild(title)
-    wrap.appendChild(mediumImage);
-    wrap.appendChild(caption)  
+    target.appendChild(title)
+    target.appendChild(mediumImage);
+    target.appendChild(caption)  
   }
