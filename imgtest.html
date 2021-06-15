@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Document</title>
+  <style>
+    .container {
+      width: 300px;
+      margin: auto;
+      /* display: flex; */
+    }
+    .p-media__thumb {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .p-media__thumb::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    .p-media__thumb > img {
+      position: absolute;
+      object-fit: cover;
+      object-position: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <div class='p-media__thumb'>
+      <img src='./img1.jpg' alt=''>
+    </div>
+    <div class='p-media__thumb'>
+      <img src='./img2.jpg' alt=''>
+    </div>
+    <div class='p-media__thumb'>
+      <img src='./img3.jpg' alt=''>
+    </div>
+  </div>
+</body>
+</html>
